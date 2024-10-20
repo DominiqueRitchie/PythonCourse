@@ -1,15 +1,56 @@
 """basic types of data + names of variables"""
+from codecs import BOM_BE
 
-a_int = int(5.4)  # целочисленный тип данных
-b_float = float(4.8)  # дробный тип данных
-c_str = "Hello"  # строковый тип данных
-
-user_input_str = input("Enter your text: ")
-user_input_int = int(input("Enter a whole number: "))
-user_input_float = float(input("Enter a fraction: "))
-
-print()
-print(a_int, b_float, c_str)
-print(user_input_str, user_input_int, user_input_float)
-print("Dominique" * 5)
-print("Dominique " + "Angry >:(")  # конкатенация (сложение строк)
+# a_int = int(5.4)  # целочисленный тип данных
+# b_float = float(4.8)  # дробный тип данных
+# c_str = "Hello"  # строковый тип данных
+#
+# user_input_str = input("Enter your text: ")
+# user_input_int = int(input("Enter a whole number: "))
+# user_input_float = float(input("Enter a fraction: "))
+#
+# print()
+# print(a_int, b_float, c_str)
+# print(user_input_str, user_input_int, user_input_float)
+# print("Dominique" * 5)
+# print("Dominique " + "Angry >:(")  # конкатенация (сложение строк)
+"""Интерполация + Выравнивание (19.10.2024)"""
+# Интерполяция – это инструмент, позволяющий вставлять значения переменных прямо в строки. Это делает код более читаемым и упрощает создание динамических текстовых сообщений.
+# Пример:
+# name = "Иван"
+# age = 30
+# message = f"Привет, {name}! Тебе {age} лет." print(message)
+# f-строки также можно использовать для выравнивания строк. Например, если требуется добавить символы "0" слева (для выравнивания по правому краю), справа (для выравнивания по левому краю) или слева и справа (для выравнивания посередине) от исходной строки до достижения длины в 9 символов:
+# print(f"{123:0>9}") print(f"{123:0<9}") print(f"{123:0^9}")
+# В консоли будут напечатаны следующие строки: 000000123
+# 123000000
+# 000123000
+# В строках можно применять управляющие символы, начинающиеся с символа «бэкслеш» \. Например:
+# ● \n—переходнановуюстроку;
+# ● \t—табуляция(будетрассмотренопозже);
+# ● \r—возвраткареткивначалострокитабуляция(будетрассмотрено
+# позже);
+# ● \b—возвраткареткинаодинсимволтабуляция(будетрассмотрено
+# позже).
+# Кроме того, с помощью бэкслеша можно экранировать символы, то есть делать их частью выводимой строки. Например, для вывода символа \ необходимо его экранировать самим собой:
+# print("\\")
+"""Домашнее Задание"""
+# 1)
+name= "Goodbye"
+age = "24"
+print(f"Hello, {name}! You are {age} years old")
+# 2)
+print(f"{345:0>10}")
+# 3)
+print(f"{345:0<8}")
+# 4)
+print("Hello,\n how are you?")
+# 5)
+print(f"{235:0^7}")
+# 6)
+print("\\")
+# 7)
+name2 = "Bob"
+age2 = "97"
+city2 = "Berlin"
+print(f"Hello, {name2}!You are {age2} years old! Welcome to {city2}!")
